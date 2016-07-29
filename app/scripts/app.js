@@ -9,13 +9,14 @@
  * Main module of the application.
  */
 angular
-  .module('appAngularGruntApp', [
+.module('appAngularGruntApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial'
   ])
   .config(function ($routeProvider) {
     $routeProvider
