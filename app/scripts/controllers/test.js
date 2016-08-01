@@ -1,16 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name appAngularGruntApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the appAngularGruntApp
- */
 angular.module('appAngularGruntApp')
-  .controller('MainCtrl', ['$scope', 'dataService', function ($scope, dataService) {
+  .controller('TestCtrl', ['$scope', 'dataService', function ($scope, dataService) {
 
-/*    $scope.clickedTrue = false;
+    $scope.clickedTrue = false;
     $scope.clickedFalse = false;
     $scope.selectedResponse = {};
     $scope.points = 0;
@@ -60,7 +53,7 @@ angular.module('appAngularGruntApp')
           $scope.Complete = false;
       }
 
-    }   
-*/
+    }
+
 
   }]);
