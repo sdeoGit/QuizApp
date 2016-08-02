@@ -1,19 +1,40 @@
 <div class="jumbotron">
   <div ng-if="Complete">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style=" width:{{progressVal}}%">
+        {{progressVal}}%
+      </div>
+    </div>    
     <div class="row" ng-repeat="question in questions" ng-show="$index == indexToShow">
       <p>Q.{{$index+1}} {{question.QText}}</p>{{clicked}}
       <md-button class="md-raised md-primary" ng-click="toggleTick(true)">{{question.Ans1}}<span ng-show="clickedTrue" class="glyphicon glyphicon-ok"></span></md-button>
       <md-button class="md-raised md-primary" ng-click="toggleTick(false)">{{question.Ans2}}<span ng-show="clickedFalse" class="glyphicon glyphicon-ok"></span></md-button>
       <br/><br/>
-      <md-button class="md-raised fixed-width" ng-click="checkResponse(question.CorrectAns)">Submit <span class="glyphicon glyphicon-thumbs-up"></span></md-button>
+
+      <md-button class="md-raised fixed-width" ng-click="checkResponse(question.CorrectAns);showSimpleToast()">Submit <span class="glyphicon glyphicon-thumbs-up"></span></md-button>
     </div>
   </div>
+
+  <!-- 
+  <div>
+    <div ng-repeat="question in questions">      
+      <table class="table table-striped">
+        <tr>
+          <td>{{question.QText}}</td>
+          <td>{{question.Ans1}}</td>
+          <td>{{question.Ans2}}</td>
+        </tr>
+      </table>    
+    </div>
+  </div>
+  -->
 </div>
 
-<div class="row marketing"  ng-show ="Done">
+<div class="row marketing"  ng-show ="Done"> 
   <h3>
-      <center>Great you are done and your score is <b>{{points}}</b> out of 100 
-        <span class="glyphicon glyphicon-thumbs-up"></span>
+      <center>Great you are done and your score is <b>{{points}}</b> out of 100  
+        <span class="glyphicon <glyphicon-thumbs-up"></span>
       </center>
-  <H3>   
+  <h3>   
 </div>
+
